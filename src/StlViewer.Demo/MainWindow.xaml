@@ -1,0 +1,20 @@
+﻿<Window x:Class="StlViewer.Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StlViewer.Demo"
+        xmlns:view="clr-namespace:StlViewer.View;assembly=StlViewer"
+        mc:Ignorable="d"
+        Title="StlViewer" Height="600" Width="600">
+    <Grid Background="CadetBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Click="OpenFile"  Width="64" HorizontalAlignment="Left" VerticalAlignment="Center">Open File</Button>
+        </StackPanel>
+        <view:StlControl Color="Cornsilk"  Width="500" Height="500" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" x:Name="StlControl"/>
+    </Grid>
+</Window>
